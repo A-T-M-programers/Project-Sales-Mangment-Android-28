@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/drawable/ic_power_settings_new_black_24dp.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_add_sales_details.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

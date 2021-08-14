@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AMW مبيعات</string>
+    <string name="hintEmail">بريد إلكتروني</string>
+    <string name="hintPassword">كلمة مرور</string>
+    <string name="contactOwner">لا أملك حساب , اتصل بالمالك</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="noInternt">• لا يوجد اتصال بالانترنت</string>
+    <string name="errorEmail">• خطأ بالبريد الإلكتروني أو كلمة المرور</string>
+    <string name="Welcome">"مرحبا بك سيد "</string>
+    <string name="Show_Sales_Persons">عرض السماسرة</string>
+    <string name="Show_Sales_Details">إضافة بيع</string>
+    <string name="Show_Sales_Regions">عرض المناطق</string>
+    <string name="Show_Reports">عرض التقارير</string>
+    <string name="Log_out">تسجيل خروج</string>
+    <string name="email">بريد إلكتروني</string>
+    <string name="name">اسم</string>
+    <string name="mobile">موبايل</string>
+    <string name="address">عنوان</string>
+    <string name="password">كلمة مرور</string>
+    <string name="imageLink">رابط الصورة</string>
+    <string name="region">المنطقة</string>
+    <string name="id">المعرف</string>
+    <string name="delete">حذف</string>
+    <string name="update">تعديل</string>
+    <string name="checkYourEmail">• الرجاء التحقق من البريد الألكتروني</string>
+    <string name="checkYourPassword">• الرجاء التحقق من كلمة المرور , على الأقل 6 محارف</string>
+    <string name="fillAllRequired">الرجاء ملء كل الحقول المطلوبة</string>
+    <string name="checkemail">الرجاء التحقق من البريد الألكتروني</string>
+    <string name="checkPasswird">الرجاء التحقق من كلمة المرور , على الأقل 6 محارف</string>
+    <string name="MinWelcome">مرحبا سيد</string>
+    <string name="registration_date">التاريخ</string>
+    <string name="amount">المبلغ</string>
+    <string name="commission">العمولة</string>
+    <string name="your_region">منطقتك</string>
+    <string name="insert">إضافة</string>
+    <string name="calculate">حساب</string>
+    <string name="all_persons">جميع المبيعات</string>
+    <string name="specific_person">مبيعات شخص محدد</string>
+    <string name="specific_region">مبيعات منطقة محددة</string>
+    <string name="go">بحث</string>
+    <string name="top_of_all">الأعلى تصنيفاً</string>
+    <string name="sum">المجموع على حسب الأشخاص</string>
+    <string name="sum_group_by_region">المجموع على حسب المناطق</string>
+    <string name="sum_group_by_region_with_date">المجموع على حسب المنطقة مع التاريخ</string>
+    <string name="about_us">من نحن :</string>
+    <string name="about_us_messege">"هذا التطبيق صمم من قبل مجموعة من طلاب الجامعة اللإفتراضية :\n • الزبير ددو\n • بلال البكرلي\n • حسين ملحم\n •دعاء قرضاب\n\n إشراف الدكتور :\n • محمد مازن محمد المصطفى\n\n الفصل :\n F18 "</string>
+    <string name="close">إغلاق</string>
+    <string name="add">إضافة</string>
+    <string name="add_sales_person">إضافة سمسار جديد</string>
+
+
+    <string-array name="region_array">
+        <item value="1">الجنوبية</item>
+        <item value="2">الشمالية</item>
+        <item value="3">الشرقية</item>
+        <item value="4">الوسطى</item>
+        <item value="5">لبنان</item>
+    </string-array>
+
+
+
+
+</resources>

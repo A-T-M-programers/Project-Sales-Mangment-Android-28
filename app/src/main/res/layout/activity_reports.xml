@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/Group_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/ED_Group_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/id"
+            android:textColor="@color/ic_launcher_background"
+            android:inputType="number"
+            android:textSize="12dp" />
+        <Button
+            android:id="@+id/BTN_Group_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent"
+            android:drawableEnd="@drawable/ic_library_books_black_24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/go"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Group_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorAccent"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/ED_Group_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/id"
+            android:textColor="@color/ic_launcher_background"
+            android:inputType="number"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/BTN_Group_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent"
+            android:drawableEnd="@drawable/ic_library_books_black_24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/go"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Group_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <Spinner
+            android:id="@+id/SP_Group_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:ems="10"
+            android:entries="@array/region_array"
+            android:padding="8dp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="12dp" />
+        <Button
+            android:id="@+id/BTN_Group_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent"
+            android:drawableEnd="@drawable/ic_library_books_black_24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/go"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Group_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+        <Spinner
+            android:id="@+id/SP_Group_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="5"
+            android:ems="10"
+            android:entries="@array/region_array"
+            android:padding="8dp"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="12dp" />
+        <Button
+            android:id="@+id/BTN_Group_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent"
+            android:drawableEnd="@drawable/ic_library_books_black_24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/go"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/Group_5"
+        android:background="@color/colorAccent"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/ED_Date_Group_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="EX : 2015-01-16"
+            android:textColor="@color/ic_launcher_background"
+            android:inputType="date"
+            android:textSize="12dp" />
+        <EditText
+            android:id="@+id/ED_Date_Group_5_per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/id"
+            android:inputType="number"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/BTN_Group_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.1"
+            android:background="@color/colorAccent"
+            android:drawableEnd="@drawable/ic_library_books_black_24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/go"
+            android:textColor="#ffffff"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+
+        <GridView
+            android:id="@+id/report_gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:isScrollContainer="true"
+            android:scrollIndicators="left|bottom"
+            android:scrollbars="horizontal|vertical"
+            android:textAlignment="center"></GridView>
+
+</LinearLayout>

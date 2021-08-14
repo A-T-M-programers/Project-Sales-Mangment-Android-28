@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bu_refresh"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_cached_black_24dp"
+        />
+    <item
+        android:id="@+id/bu_add_person"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_person_add_black_24dp"
+        />
+
+</menu>

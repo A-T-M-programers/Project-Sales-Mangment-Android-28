@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/alert_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_id"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/id"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:gravity="right"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/name"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/email"
+                    android:textSize="16dp"
+                    android:inputType="textEmailAddress"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_mobile"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/mobile"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+
+                    android:inputType="phone"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/address"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_password"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/password"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/txt_image_link"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/imageLink"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ed_image_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="right"
+
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_region"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/region"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:entries="@array/region_array"
+                    android:gravity="right"
+                    android:padding="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

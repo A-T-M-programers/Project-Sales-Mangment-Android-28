@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="259dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-36dp"
+            android:layout_marginTop="-36dp"
+            app:srcCompat="@drawable/logo01" />
+
+
+        <TextView
+            android:id="@+id/mainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/mainText"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/BTN_Show_Sales_Persons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#3B5998"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_people_black_24dp"
+            android:padding="16dp"
+            android:text="@string/Show_Sales_Persons"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/BTN_Add_Sales_Details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#3B5998"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_shopping_cart_black_24dp"
+            android:padding="16dp"
+            android:text="@string/Show_Sales_Details"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/BTN_Show_Reports"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#3B5998"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_library_books_black_24dp"
+            android:padding="16dp"
+            android:text="@string/Show_Reports"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/BTN_Log_out"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#860000"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_power_settings_new_black_24dp"
+            android:padding="16dp"
+            android:text="@string/Log_out"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+</ScrollView>

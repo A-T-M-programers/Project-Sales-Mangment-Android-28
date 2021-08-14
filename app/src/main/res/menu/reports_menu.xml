@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group >
+        <item android:id="@+id/report_all" android:title="@string/all_persons" />
+        <item android:title="@string/specific_person" android:id="@+id/report_person"/>
+        <item android:title="@string/specific_region" android:id="@+id/report_region"/>
+        <item android:title="@string/top_of_all" android:id="@+id/report_top_all"/>
+        <item android:title="@string/sum" android:id="@+id/report_sum_grouping_persons"/>
+        <item android:title="@string/sum_group_by_region_with_date" android:id="@+id/report_sum_grouping_regions_date"/>
+    </group>
+</menu>

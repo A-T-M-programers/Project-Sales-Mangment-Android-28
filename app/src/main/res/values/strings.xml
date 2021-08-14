@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">AMW Sales</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintPassword">Password</string>
+    <string name="contactOwner">"Don't have account , contact owner"</string>
+    <string name="login">Login</string>
+    <string name="noInternt">• No Internet Connection</string>
+    <string name="errorEmail">"• Wrong email or password!"</string>
+
+    <string name="title_activity_main_menu">Main</string>
+    <string name="Welcome">"Welcome to AMW Mr."</string>
+    <string name="Show_Sales_Persons">"Show sales persons"</string>
+    <string name="Show_Sales_Details">Add Sales Details</string>
+    <string name="Show_Sales_Regions">Show Sales Regions</string>
+    <string name="Show_Reports">Show Reports</string>
+    <string name="Log_out">Log out</string>
+    <string name="email">email</string>
+    <string name="name">Name</string>
+    <string name="mobile">mobile</string>
+    <string name="address">address</string>
+    <string name="password">password</string>
+    <string name="imageLink">Image Link</string>
+    <string name="region">Region</string>
+    <string name="id">ID</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="checkYourEmail">• Please check your email</string>
+    <string name="checkYourPassword">• Plaese check your password , at least 6 characters</string>
+    <string name="fillAllRequired">Please fill all required fields</string>
+    <string name="checkemail">Please check email address</string>
+    <string name="checkPasswird">Please check password , must be at least 6 charecters</string>
+    <string name="MinWelcome">Welcome Mr</string>
+    <string name="registration_date">Date</string>
+    <string name="amount">Amount</string>
+    <string name="commission">Commission</string>
+    <string name="your_region">Your Region</string>
+    <string name="insert">Insert</string>
+    <string name="calculate">Calculate</string>
+    <string name="all_persons">All</string>
+    <string name="specific_person">Specific Person</string>
+    <string name="specific_region">Specific Region</string>
+    <string name="go">GO</string>
+    <string name="top_of_all">Top of all</string>
+    <string name="sum">Sum grouping persons</string>
+    <string name="sum_group_by_region">Sum grouping regions</string>
+    <string name="sum_group_by_region_with_date">Sum grouping regions with date</string>
+    <string name="about_us">About Us :</string>
+    <string name="about_us_messege">This application created by SVU students : \n
+        • Zoubair Daddow \n
+        • Belal Aldear bkrle \n
+        • Hussain Melhm \n
+        • Douaa Kourdab \n\n
+        Supervision : \n
+        • Muhammad Mazen Muhammad Almustafa  \n\n
+        Term : \n
+        • F18</string>
+    <string name="close">Close</string>
+    <string name="add">Add</string>
+    <string name="add_sales_person">Add Sales Person</string>
+
+    <string-array name="region_array">
+        <item value="1">Southern</item>
+        <item value="2">Northern</item>
+        <item value="3">Eastern</item>
+        <item value="4">Coastal</item>
+        <item value="5">Lebanon</item>
+    </string-array>
+
+</resources>
