@@ -1,5 +1,6 @@
 package com.example.awmsales;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +13,12 @@ import org.json.JSONObject;
 public class GridReportsAdapter extends BaseAdapter {
     private final Context Context;
     private final JSONArray Data;
+    private final Person person;
 
-    public GridReportsAdapter(android.content.Context context, JSONArray Data) {
+    public GridReportsAdapter(android.content.Context context, JSONArray Data,Person person) {
         Context = context;
         this.Data = Data;
+        this.person = person;
     }
 
 
@@ -41,66 +44,158 @@ public class GridReportsAdapter extends BaseAdapter {
     }
 
 
+    @SuppressLint({"InflateParams", "SetTextI18n", "ViewHolder"})
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        LayoutInflater inflater = (LayoutInflater) Context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) Context.getSystemService(android.content.Context.LAYOUT_INFLATER_SERVICE);
 
         View gridView = inflater.inflate(R.layout.grid_reports, null);
 
         JSONObject SingleRowOfData = getItem(position);
 
-        TextView det_id = (TextView) gridView.findViewById(R.id.det_id);
-        TextView per_id = (TextView) gridView.findViewById(R.id.per_id);
+        TextView ord_id = (TextView) gridView.findViewById(R.id.ord_id);
+        TextView customer_id = (TextView) gridView.findViewById(R.id.customer_id);
+        TextView created_id = (TextView) gridView.findViewById(R.id.created_id);
         TextView per_name = (TextView) gridView.findViewById(R.id.per_name);
+        TextView price = (TextView) gridView.findViewById(R.id.price);
         TextView amount = (TextView) gridView.findViewById(R.id.amount);
-        TextView commission = (TextView) gridView.findViewById(R.id.commission);
+        TextView total = (TextView) gridView.findViewById(R.id.total);
+        TextView discount = (TextView) gridView.findViewById(R.id.discount);
+        TextView afterdiscount = (TextView) gridView.findViewById(R.id.after_discount);
         TextView sum_of_amount = (TextView) gridView.findViewById(R.id.sum_of_amount);
-        TextView max_commission = (TextView) gridView.findViewById(R.id.max_commission);
-        TextView sum_of_commission = (TextView) gridView.findViewById(R.id.sum_of_commission);
+        TextView max_discount = (TextView) gridView.findViewById(R.id.max_discount);
+        TextView sum_of_total = (TextView) gridView.findViewById(R.id.sum_of_total);
+        TextView sum_after_discount = (TextView) gridView.findViewById(R.id.sum_after_discount);
         TextView region_name = (TextView) gridView.findViewById(R.id.region_name);
         TextView registration_date = (TextView) gridView.findViewById(R.id.registration_date);
         try {
-                for (Integer x = 0; x < SingleRowOfData.length(); x++) {
-                    if (SingleRowOfData.has("det_id")) {
-                        det_id.setText("DetID\n"+SingleRowOfData.getString("det_id"));
-                        det_id.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("per_id")) {
-                        per_id.setText("PerID\n"+SingleRowOfData.getString("per_id"));
-                        per_id.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("per_name")) {
-                        per_name.setText("Name\n"+SingleRowOfData.getString("per_name"));
-                        per_name.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("amount")) {
-                        amount.setText("Amount\n"+SingleRowOfData.getString("amount"));
-                        amount.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("commission")) {
-                        commission.setText("Commission\n"+SingleRowOfData.getString("commission"));
-                        commission.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("sum_of_amount")) {
-                        sum_of_amount.setText("SumAmount\n"+SingleRowOfData.getString("sum_of_amount"));
-                        sum_of_amount.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("max_commission")) {
-                        max_commission.setText("MaxCommission\n"+SingleRowOfData.getString("max_commission"));
-                        max_commission.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("sum_of_commission")) {
-                        sum_of_commission.setText("SumCommission\n"+SingleRowOfData.getString("sum_of_commission"));
-                        sum_of_commission.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("region_name")) {
-                        region_name.setText("Region\n"+SingleRowOfData.getString("region_name"));
-                        region_name.setVisibility(View.VISIBLE);
-                    }
-                    if (SingleRowOfData.has("registration_date")) {
-                        registration_date.setText("Date\n"+SingleRowOfData.getString("registration_date"));
-                        registration_date.setVisibility(View.VISIBLE);
+                for (int x = 0; x < SingleRowOfData.length(); x++) {
+                    if (!person.isType()){
+                        if (SingleRowOfData.getString("customer_id").equals(String.valueOf(person.getPer_id()))||
+                                SingleRowOfData.getString("created_id").equals(String.valueOf(person.getPer_id()))){
+                            if (SingleRowOfData.has("order_id")) {
+                                ord_id.setText("OrdID\n"+SingleRowOfData.getString("order_id"));
+                                ord_id.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("customer_name")) {
+                                customer_id.setText("CustomerName\n"+SingleRowOfData.getString("customer_name"));
+                                customer_id.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("created_name")) {
+                                created_id.setText("SuperVisorsName\n"+SingleRowOfData.getString("created_name"));
+                                created_id.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("product_name")) {
+                                per_name.setText("ProductName\n"+SingleRowOfData.getString("product_name"));
+                                per_name.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("price")) {
+                                price.setText("Price\n"+SingleRowOfData.getString("price"));
+                                price.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("amount")) {
+                                amount.setText("Amount\n"+SingleRowOfData.getString("amount"));
+                                amount.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("total")) {
+                                total.setText("Total\n"+SingleRowOfData.getString("total"));
+                                total.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("discount")) {
+                                discount.setText("Discount\n"+SingleRowOfData.getString("discount"));
+                                discount.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("total_after_dis")) {
+                                afterdiscount.setText("TotalAfterDis\n"+SingleRowOfData.getString("total_after_dis"));
+                                afterdiscount.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("sum_of_amount")) {
+                                sum_of_amount.setText("SumAmount\n"+SingleRowOfData.getString("sum_of_amount"));
+                                sum_of_amount.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("max_discount")) {
+                                max_discount.setText("MaxDiscount\n"+SingleRowOfData.getString("max_discount"));
+                                max_discount.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("sum_total")) {
+                                sum_of_total.setText("SumTotal\n"+SingleRowOfData.getString("sum_total"));
+                                sum_of_total.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("sum_after_dis")) {
+                                sum_after_discount.setText("SumAfterDis\n"+SingleRowOfData.getString("sum_after_dis"));
+                                sum_after_discount.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("region_name")) {
+                                region_name.setText("Region\n"+SingleRowOfData.getString("region_name"));
+                                region_name.setVisibility(View.VISIBLE);
+                            }
+                            if (SingleRowOfData.has("order_created_date")) {
+                                registration_date.setText("Date\n"+SingleRowOfData.getString("order_created_date"));
+                                registration_date.setVisibility(View.VISIBLE);
+                            }
+                        }
+                    }else {
+                        if (SingleRowOfData.has("order_id")) {
+                            ord_id.setText("OrdID\n" + SingleRowOfData.getString("order_id"));
+                            ord_id.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("customer_name")) {
+                            customer_id.setText("CustomerName\n" + SingleRowOfData.getString("customer_name"));
+                            customer_id.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("created_name")) {
+                            created_id.setText("SuperVisorsName\n" + SingleRowOfData.getString("created_name"));
+                            created_id.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("product_name")) {
+                            per_name.setText("ProductName\n" + SingleRowOfData.getString("product_name"));
+                            per_name.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("price")) {
+                            price.setText("Price\n" + SingleRowOfData.getString("price"));
+                            price.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("amount")) {
+                            amount.setText("Amount\n" + SingleRowOfData.getString("amount"));
+                            amount.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("total")) {
+                            total.setText("Total\n" + SingleRowOfData.getString("total"));
+                            total.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("discount")) {
+                            discount.setText("Discount\n" + SingleRowOfData.getString("discount"));
+                            discount.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("total_after_dis")) {
+                            afterdiscount.setText("TotalAfterDis\n" + SingleRowOfData.getString("total_after_dis"));
+                            afterdiscount.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("sum_of_amount")) {
+                            sum_of_amount.setText("SumAmount\n" + SingleRowOfData.getString("sum_of_amount"));
+                            sum_of_amount.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("max_discount")) {
+                            max_discount.setText("MaxDiscount\n" + SingleRowOfData.getString("max_discount"));
+                            max_discount.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("sum_total")) {
+                            sum_of_total.setText("SumTotal\n" + SingleRowOfData.getString("sum_total"));
+                            sum_of_total.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("sum_after_dis")) {
+                            sum_after_discount.setText("SumAfterDis\n" + SingleRowOfData.getString("sum_after_dis"));
+                            sum_after_discount.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("region_name")) {
+                            region_name.setText("Region\n" + SingleRowOfData.getString("region_name"));
+                            region_name.setVisibility(View.VISIBLE);
+                        }
+                        if (SingleRowOfData.has("order_created_date")) {
+                            registration_date.setText("Date\n" + SingleRowOfData.getString("order_created_date"));
+                            registration_date.setVisibility(View.VISIBLE);
+                        }
                     }
                 }
             } catch (Exception e) {

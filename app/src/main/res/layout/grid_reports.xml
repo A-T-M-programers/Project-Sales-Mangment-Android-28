@@ -9,7 +9,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/det_id"
+            android:id="@+id/ord_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -20,7 +20,17 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/per_id"
+            android:id="@+id/customer_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textSize="12dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/created_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -40,9 +50,29 @@
             android:text="TextView"
             android:textSize="12dp"
             android:visibility="gone" />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textSize="12dp"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textSize="12dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -64,7 +94,17 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/commission"
+            android:id="@+id/discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textSize="12dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/after_discount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -75,7 +115,7 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/max_commission"
+            android:id="@+id/max_discount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -86,7 +126,17 @@
             android:visibility="gone" />
 
         <TextView
-            android:id="@+id/sum_of_commission"
+            android:id="@+id/sum_of_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="TextView"
+            android:textSize="12dp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/sum_after_discount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

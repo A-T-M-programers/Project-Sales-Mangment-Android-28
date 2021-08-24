@@ -7,7 +7,7 @@
     <string name="noInternt">• No Internet Connection</string>
     <string name="errorEmail">"• Wrong email or password!"</string>
 
-    <string name="title_activity_main_menu">Main</string>
+    <string name="title_activity_main_menu" translatable="false">Main</string>
     <string name="Welcome">"Welcome to AMW Mr."</string>
     <string name="Show_Sales_Persons">"Show sales persons"</string>
     <string name="Show_Sales_Details">Add Sales Details</string>
@@ -15,13 +15,13 @@
     <string name="Show_Reports">Show Reports</string>
     <string name="Log_out">Log out</string>
     <string name="email">email</string>
-    <string name="name">Name</string>
+    <string name="To">To</string>
     <string name="mobile">mobile</string>
     <string name="address">address</string>
     <string name="password">password</string>
-    <string name="imageLink">Image Link</string>
+    <string name="User_Status">User Status</string>
     <string name="region">Region</string>
-    <string name="id">ID</string>
+    <string name="From">From</string>
     <string name="delete">Delete</string>
     <string name="update">Update</string>
     <string name="checkYourEmail">• Please check your email</string>
@@ -29,11 +29,19 @@
     <string name="fillAllRequired">Please fill all required fields</string>
     <string name="checkemail">Please check email address</string>
     <string name="checkPasswird">Please check password , must be at least 6 charecters</string>
+    <string name="userNone">Well add featuer customer after to</string>
     <string name="MinWelcome">Welcome Mr</string>
     <string name="registration_date">Date</string>
     <string name="amount">Amount</string>
-    <string name="commission">Commission</string>
-    <string name="your_region">Your Region</string>
+    <string name="Discount">Discount</string>
+    <string name="AfterDiscount">AfterDiscount</string>
+    <string name="Total">Total</string>
+    <string name="Category">Category</string>
+    <string name="Product">Product</string>
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="Price">Price :</string>
+    <string name="Available">Available :</string>
     <string name="insert">Insert</string>
     <string name="calculate">Calculate</string>
     <string name="all_persons">All</string>
@@ -43,7 +51,7 @@
     <string name="top_of_all">Top of all</string>
     <string name="sum">Sum grouping persons</string>
     <string name="sum_group_by_region">Sum grouping regions</string>
-    <string name="sum_group_by_region_with_date">Sum grouping regions with date</string>
+    <string name="sum_group_by_region_with_date">Sum grouping person id with date</string>
     <string name="about_us">About Us :</string>
     <string name="about_us_messege">This application created by SVU students : \n
         • Zoubair Daddow \n

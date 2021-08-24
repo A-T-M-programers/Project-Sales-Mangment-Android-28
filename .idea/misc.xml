@@ -3,9 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22205128205128205" />
         <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/drawable/ic_power_settings_new_black_24dp.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_add_sales_details.xml" value="0.19429347826086957" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_admin_menu.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_reports.xml" value="0.209375" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/activity_sales_persons.xml" value="0.209375" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/custom_builder.xml" value="0.25" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/grid_reports.xml" value="0.10364583333333334" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/layout/list_persons.xml" value="0.10364583333333334" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/menu/mymenu.xml" value="0.18" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/menu/reports_menu.xml" value="0.10677083333333333" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.25" />
+        <entry key="..\:/Users/Tofiq/Desktop/App/AwmSales/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22552083333333334" />
       </map>
     </option>
   </component>

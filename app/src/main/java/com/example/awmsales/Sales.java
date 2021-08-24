@@ -5,20 +5,27 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Sales  implements Serializable {
-    private int sal_id;
+    private int sal_id,count;
     private Person person;
-    private Region region;
+    private users user;
+    private Product product;
     private Date registration_date;
     private Double amount;
-    private Double commission;
+    private Double discount;
+    private Double total;
+    private Double afterdiscount;
 
-    public Sales(int sal_id, Person person, Region region, Date registration_date, Double amount, Double commission) {
+    public Sales(int sal_id, Person person, Product product,users user, Date registration_date, Double amount, Double discount,Double total,Double afterdiscount,int count) {
         this.sal_id = sal_id;
         this.person = person;
-        this.region = region;
+        this.product = product;
+        this.user = user;
         this.registration_date = registration_date;
         this.amount = amount;
-        this.commission = commission;
+        this.discount = discount;
+        this.afterdiscount = afterdiscount;
+        this.total = total;
+        this.count = count;
     }
 
     public Sales(){}
@@ -39,12 +46,12 @@ public class Sales  implements Serializable {
         this.person = person;
     }
 
-    public Region getRegion() {
-        return region;
+    public Product getRegion() {
+        return product;
     }
 
-    public void setRegion(Region region) {
-        this.region = region;
+    public void setRegion(Product product) {
+        this.product = product;
     }
 
     public Date getRegistration_date() {
@@ -63,11 +70,51 @@ public class Sales  implements Serializable {
         this.amount = amount;
     }
 
-    public Double getCommission() {
-        return commission;
+    public int getCount() {
+        return count;
     }
 
-    public void setCommission(Double commission) {
-        this.commission = commission;
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public Double getAfterdiscount() {
+        return afterdiscount;
+    }
+
+    public Double getDiscount() {
+        return discount;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public users getUser() {
+        return user;
+    }
+
+    public void setAfterdiscount(Double afterdiscount) {
+        this.afterdiscount = afterdiscount;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public void setDiscount(Double discount) {
+        this.discount = discount;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
+    }
+
+    public void setUser(users user) {
+        this.user = user;
     }
 }

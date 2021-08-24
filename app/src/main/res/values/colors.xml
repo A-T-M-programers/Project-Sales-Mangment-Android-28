@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00C9FF</color>
+    <color name="colorPrimary">#B5EAEA</color>
     <color name="colorPrimaryDark">#016AC2</color>
     <color name="colorAccent">#03A9F4</color>
-    <color name="tvColor">#A70404</color>
+    <color name="tvColor">#FDD2BF</color>
     <color name="mainText">#0091D1</color>
+    <color name="layout">#EDF6E5</color>
+    <color name="button">#8FC1D4</color>
 
     <color name="black_overlay">#66000000</color>
 </resources>

@@ -34,6 +34,7 @@ import static com.example.awmsales.static_class.ITEM_TYPE;
 import static com.example.awmsales.static_class.LOGIN_PERSON;
 import static com.example.awmsales.static_class.PERSONS;
 import static com.example.awmsales.static_class.REQUEST_TYPE;
+import static com.example.awmsales.static_class.USERS;
 
 public class SalesPersons extends AppCompatActivity {
 
@@ -47,38 +48,71 @@ public class SalesPersons extends AppCompatActivity {
     protected void RefreshList (){
     ListView list_persons = findViewById(R.id.list_persons);
     ArrayList<Person> list_person = new ArrayList<>();
+    if (loginPerson.isType()) {
+        String result = "";
+        try {
+            result = new GetInBackground().execute(
+                    REQUEST_TYPE, GET_ALL,
+                    ITEM_TYPE, PERSONS
+            ).get();
 
-    String result = "";
-    try {
-        result = new GetInBackground().execute(
-                REQUEST_TYPE,GET_ALL,
-                ITEM_TYPE,PERSONS
-        ).get();
+            JSONArray jsonArray = new JSONArray(result);
 
-        JSONArray jsonArray = new JSONArray(result);
+            for (int x = 0; x < jsonArray.length(); x++) {
+                JSONObject jsonObject = new JSONObject(String.valueOf(jsonArray.getJSONObject(x)));
+                Person person = Person.getPersonFromJson(jsonObject);
+                list_person.add(person);
+            }
 
-        for(int x=0; x<jsonArray.length(); x++){
-            JSONObject jsonObject = new JSONObject(String.valueOf(jsonArray.getJSONObject(x)));
-            Person person = Person.getPersonFromJson(jsonObject);
-            list_person.add(person);
+            adapter = new PersonAdapterList(this, R.layout.list_persons, list_person, loginPerson.isType());
+
+            list_persons.setAdapter(adapter);
+
+
+        } catch (ExecutionException e) {
+            String msg = e.getMessage();
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        } catch (InterruptedException e) {
+            String msg = e.getMessage();
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        } catch (JSONException e) {
+            String msg = e.getMessage();
+            Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         }
+    }else {
+            String result = "";
+            try {
+                result = new GetInBackground().execute(
+                        REQUEST_TYPE, GET_ALL,
+                        ITEM_TYPE, PERSONS,
+                        USERS,"users"
+                ).get();
 
-        adapter = new PersonAdapterList(this,R.layout.list_persons,list_person,loginPerson.isType());
+                JSONArray jsonArray = new JSONArray(result);
 
-        list_persons.setAdapter(adapter);
+                for (int x = 0; x < jsonArray.length(); x++) {
+                    JSONObject jsonObject = new JSONObject(String.valueOf(jsonArray.getJSONObject(x)));
+                    Person person = Person.getPersonFromJson(jsonObject);
+                    list_person.add(person);
+                }
+
+                adapter = new PersonAdapterList(this, R.layout.list_persons, list_person, loginPerson.isType());
+
+                list_persons.setAdapter(adapter);
 
 
-    } catch (ExecutionException e) {
-        String msg = e.getMessage();
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
-    } catch (InterruptedException e) {
-        String msg = e.getMessage();
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
-    } catch (JSONException e) {
-        String msg = e.getMessage();
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
+            } catch (ExecutionException e) {
+                String msg = e.getMessage();
+                Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+            } catch (InterruptedException e) {
+                String msg = e.getMessage();
+                Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+            } catch (JSONException e) {
+                String msg = e.getMessage();
+                Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+            }
+        }
     }
-}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,10 +157,7 @@ public class SalesPersons extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (loginPerson.isType())
         getMenuInflater().inflate(R.menu.mymenu, menu);
-        else{        return super.onCreateOptionsMenu(menu);
-        }
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -134,7 +165,7 @@ public class SalesPersons extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
             if (id == R.id.bu_add_person) {
-                final ALertBuilder alertBuilder = new ALertBuilder(ADD_PERSON_ALERT, SalesPersons.this);
+                final ALertBuilder alertBuilder = new ALertBuilder(ADD_PERSON_ALERT,loginPerson, SalesPersons.this);
                 final android.app.AlertDialog.Builder builder = alertBuilder.MyBuilder();
 
                 AlertDialog alert1 = builder.create();

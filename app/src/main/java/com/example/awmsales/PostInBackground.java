@@ -122,6 +122,7 @@ class PostInBackground extends AsyncTask<String, String, String> {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+            Log.e("ERROR",e.getMessage());
         }
         return returnData;
     }

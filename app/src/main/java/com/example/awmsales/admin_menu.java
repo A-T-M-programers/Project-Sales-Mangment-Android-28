@@ -28,6 +28,9 @@ public class admin_menu extends AppCompatActivity {
                 finish();
             }else if(v.getId() == R.id.BTN_Show_Reports){
                 Intent intent = new Intent(admin_menu.this,Reports.class);
+                Intent login_intent = getIntent();
+                Person loginPerson = (Person) login_intent.getSerializableExtra(LOGIN_PERSON);
+                intent.putExtra(LOGIN_PERSON, loginPerson);
                 startActivity(intent);
             }else if(v.getId() == R.id.BTN_Add_Sales_Details){
 
@@ -66,10 +69,6 @@ public class admin_menu extends AppCompatActivity {
 
         Intent login_intent = getIntent();
         Person loginPerson = (Person) login_intent.getSerializableExtra(LOGIN_PERSON);
-
-        if(!loginPerson.isType()){
-            BTN_Show_Reports.setVisibility(View.INVISIBLE);
-        }
 
         mainTXT = (TextView) findViewById(R.id.mainText);
 

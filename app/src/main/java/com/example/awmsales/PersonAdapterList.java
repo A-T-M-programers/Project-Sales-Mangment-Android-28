@@ -63,7 +63,7 @@ public class PersonAdapterList extends ArrayAdapter<Person> {
 
         String name = person.getName();
         String email = person.getEmail();
-        String image = person.getImage();
+//        String image = person.getImage();
 
         final LayoutInflater inflator = LayoutInflater.from(context);
         convertView = inflator.inflate(resource,parent,false);
@@ -74,7 +74,7 @@ public class PersonAdapterList extends ArrayAdapter<Person> {
 
         txt_person_name.setText(name);
         txt_person_email.setText(email);
-        new AsyncTaskLoadImage(image_person).execute(image);
+//        new AsyncTaskLoadImage(image_person).execute(image);
 
 
         final View finalConvertView = convertView;
@@ -82,7 +82,7 @@ public class PersonAdapterList extends ArrayAdapter<Person> {
             @Override
             public void onClick(View v) {
                 if (isAdmin) {
-                    final ALertBuilder alertBuilder = new ALertBuilder(ADMIN_ALERT,person,context);
+                    final ALertBuilder alertBuilder = new ALertBuilder(ADMIN_ALERT,person,context,isAdmin);
                     final android.app.AlertDialog.Builder builder = alertBuilder.MyBuilder();
 
                     final AlertDialog alert1 = builder.create();
@@ -97,7 +97,7 @@ public class PersonAdapterList extends ArrayAdapter<Person> {
                     });
 
                 }else{
-                    final ALertBuilder alertBuilder = new ALertBuilder(USER_ALERT,person,context);
+                    final ALertBuilder alertBuilder = new ALertBuilder(USER_ALERT,person,context,isAdmin);
                     final android.app.AlertDialog.Builder builder = alertBuilder.MyBuilder();
 
                     final AlertDialog alert1 = builder.create();

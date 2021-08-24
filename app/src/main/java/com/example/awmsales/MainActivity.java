@@ -141,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
                 //create object of Person class and put the information from json object
                 //using getPersonFromJson method
                 Person loginPerson = Person.getPersonFromJson(jsonObject);
+                if (loginPerson.getPerson_type().equals("3")){
+                    tv.setText(R.string.userNone);
+                    return;
+                }
 
 
                 Intent intentAdmin = new Intent(MainActivity.this, admin_menu.class);

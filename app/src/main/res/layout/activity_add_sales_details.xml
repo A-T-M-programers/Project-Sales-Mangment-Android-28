@@ -25,10 +25,11 @@
         android:textAlignment="center"
         android:text="@string/MinWelcome"
         android:layout_gravity="right"
-        android:paddingRight="28dp"
+        android:paddingRight="50dp"
         android:textStyle="bold"
         android:textSize="18dp"
-        android:textColor="@color/ic_launcher_background"/>
+        android:textColor="@color/ic_launcher_background"
+        tools:ignore="RtlCompat,RtlHardcoded" />
 
 
     <ProgressBar
@@ -49,7 +50,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/ic_launcher_background"
+            android:background="#EDF6E5"
             android:elevation="5dp"
             android:orientation="vertical"
             android:paddingLeft="16dp"
@@ -69,11 +70,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="8dp"
-                    android:text="@string/id"
+                    android:text="@string/From"
                     android:textSize="16dp" />
 
                 <EditText
-                    android:id="@+id/ed_id"
+                    android:id="@+id/ed_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -95,18 +96,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="8dp"
-                    android:text="@string/name"
+                    android:text="@string/To"
                     android:textSize="16dp" />
 
-                <EditText
-                    android:id="@+id/ed_name"
+                <Spinner
+                    android:id="@+id/sp_To"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:enabled="false"
-                    android:inputType="textPersonName"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="12dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -143,8 +144,77 @@
                 android:paddingTop="8dp">
 
                 <TextView
-                    android:id="@+id/txt_amount"
+                    android:id="@+id/txt_category"
                     android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/Category"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/sp_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/txt_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/Product"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/sp_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:padding="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txt_pri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/Price"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/txt_amount"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="8dp"
@@ -153,6 +223,72 @@
 
                 <EditText
                     android:id="@+id/ed_amount"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:padding="8dp" />
+                <TextView
+                    android:id="@+id/txt_av"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/Available"
+                    android:textSize="16dp" />
+                <TextView
+                    android:id="@+id/txt_available"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/txt_user_region"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/Total"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/ed_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="textPersonName"
+                    android:padding="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/txt_Discount"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text="@string/Discount"
+                    android:textSize="16dp" />
+
+                <EditText
+                    android:id="@+id/ed_Discount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -168,16 +304,16 @@
                 android:paddingTop="8dp">
 
                 <TextView
-                    android:id="@+id/txt_commission"
+                    android:id="@+id/txt_after_discount"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="8dp"
-                    android:text="@string/commission"
+                    android:text="@string/AfterDiscount"
                     android:textSize="16dp" />
 
                 <EditText
-                    android:id="@+id/ed_commission"
+                    android:id="@+id/ed_afterdiscount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -185,59 +321,6 @@
                     android:enabled="false"
                     android:inputType="textPersonName"
                     android:padding="8dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="8dp">
-
-                <TextView
-                    android:id="@+id/txt_user_region"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:text="@string/your_region"
-                    android:textSize="16dp" />
-
-                <EditText
-                    android:id="@+id/ed_user_region"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:enabled="false"
-                    android:inputType="textPersonName"
-                    android:padding="8dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="8dp">
-
-                <TextView
-                    android:id="@+id/txt_region"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:text="@string/region"
-                    android:textSize="16dp" />
-
-                <Spinner
-                    android:id="@+id/sp_region"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:entries="@array/region_array"
-                    android:padding="8dp"
-                    android:textColorLink="@color/colorPrimary"
-                    android:textSize="12dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -252,7 +335,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
                     android:layout_weight="1"
-                    android:background="#00BCD4"
+                    android:background="@color/button"
                     android:drawableLeft="@drawable/ic_archive_black_24dp"
                     android:padding="8dp"
                     android:text="@string/insert"
@@ -265,7 +348,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
-                    android:background="#00BCD4"
+                    android:background="@color/button"
                     android:drawableLeft="@drawable/ic_attach_money_black_24dp"
                     android:padding="8dp"
                     android:text="@string/calculate"
